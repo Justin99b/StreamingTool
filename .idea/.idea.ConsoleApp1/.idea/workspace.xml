@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8477e712-acca-491b-8b4f-e7474698e86e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/ConsoleApp1.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConsoleApp1/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SocketServer/Client.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SocketServer/Event.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SocketServer/EventManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SocketServer/Packet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SocketServer/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ConsoleApp1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClient/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketClient/SocketClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClient/SocketClient.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketClient/obj/Debug/netcoreapp2.2/SocketClient.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClient/obj/Debug/netcoreapp2.2/SocketClient.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketClient/obj/SocketClient.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClient/obj/SocketClient.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketClient/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClient/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketClient/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SocketClient/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/SocketServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/SocketServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/bin/Debug/netcoreapp2.2/SocketServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/bin/Debug/netcoreapp2.2/SocketServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/bin/Debug/netcoreapp2.2/SocketServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/bin/Debug/netcoreapp2.2/SocketServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/obj/Debug/netcoreapp2.2/SocketServer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/obj/Debug/netcoreapp2.2/SocketServer.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/obj/SocketServer.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/obj/SocketServer.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketServer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SocketServer/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,42 +33,132 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ConsoleApp1/Program.cs">
+        <entry file="file://$PROJECT_DIR$/SocketServer/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state relative-caret-position="280">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
-                <marker date="1563774308462" expanded="true" signature="37:131" ph="{...}" />
-                <marker date="1563774308462" expanded="true" signature="57:129" ph="{...}" />
-                <marker date="1563774308462" expanded="true" signature="99:123" ph="{...}" />
+                <marker date="1563787632811" expanded="true" signature="6:134" ph="..." />
+                <marker date="1563787632811" expanded="true" signature="158:246" ph="{...}" />
+                <marker date="1563787632811" expanded="true" signature="175:244" ph="{...}" />
+                <marker date="1563787632811" expanded="true" signature="211:241" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocketServer/Server.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="695">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding>
+                <marker date="1563794184677" expanded="true" signature="6:134" ph="..." />
+                <marker date="1563794184677" expanded="true" signature="158:789" ph="{...}" />
+                <marker date="1563794184677" expanded="true" signature="181:787" ph="{...}" />
+                <marker date="1563794184677" expanded="true" signature="332:784" ph="{...}" />
+                <marker date="1563794184677" expanded="true" signature="577:780" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SocketServer/Client.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+              <folding>
+                <marker date="1563794339051" expanded="true" signature="6:136" ph="..." />
+                <marker date="1563794339051" expanded="true" signature="160:1569" ph="{...}" />
+                <marker date="1563794339051" expanded="true" signature="183:1567" ph="{...}" />
+                <marker date="1563794339051" expanded="true" signature="381:927" ph="{...}" />
+                <marker date="1563794339051" expanded="true" signature="444:842" ph="{...}" />
+                <marker date="1563794339051" expanded="true" signature="463:837" ph="{...}" />
+                <marker date="1563794339051" expanded="true" signature="994:1093" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SocketServer/Packet.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+              <folding>
+                <marker date="1563794318551" expanded="true" signature="6:102" ph="..." />
+                <marker date="1563794318551" expanded="true" signature="126:1378" ph="{...}" />
+                <marker date="1563794318551" expanded="true" signature="149:1376" ph="{...}" />
+                <marker date="1563794318551" expanded="true" signature="259:460" ph="/* public Packet(byte[] data) { ... */" />
+                <marker date="1563794318551" expanded="true" signature="487:618" ph="{...}" />
+                <marker date="1563794318551" expanded="true" signature="651:756" ph="{...}" />
+                <marker date="1563794318551" expanded="false" signature="785:812" ph="{...}" />
+                <marker date="1563794318551" expanded="false" signature="835:880" ph="{...}" />
+                <marker date="1563794318551" expanded="true" signature="881:994" ph="/* public Packet(Guid packetGuid, byte[] data) { ... */" />
+                <marker date="1563794318551" expanded="true" signature="1031:1078" ph="{...}" />
+                <marker date="1563794318551" expanded="false" signature="1129:1373" ph="{...}" />
+                <marker date="1563794318551" expanded="true" signature="1244:1349" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SocketClient/Program.cs">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding>
+                <marker date="1563794089744" expanded="true" signature="6:128" ph="..." />
+                <marker date="1563794089744" expanded="true" signature="153:994" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="170:992" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="206:989" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="325:921" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="482:665" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="502:659" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="697:881" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="717:875" ph="{...}" />
+                <marker date="1563794089744" expanded="true" signature="942:985" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>receivedDataLength</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SocketServer/Packet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SocketServer/Event.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SocketServer/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SocketServer/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SocketServer/Client.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SocketServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SocketClient/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ConsoleApp1/Program.cs" />
+        <option value="$PROJECT_DIR$/SocketServer/Event.cs" />
+        <option value="$PROJECT_DIR$/SocketServer/EventManager.cs" />
+        <option value="$PROJECT_DIR$/SocketServer/Program.cs" />
         <option value="$PROJECT_DIR$/SocketClient/Program.cs" />
+        <option value="$PROJECT_DIR$/SocketServer/Server.cs" />
+        <option value="$PROJECT_DIR$/SocketServer/Packet.cs" />
+        <option value="$PROJECT_DIR$/SocketServer/Client.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2180" />
     <option name="y" value="808" />
     <option name="width" value="1400" />
@@ -71,6 +179,16 @@
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="ConsoleApp1" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="ConsoleApp1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SocketClient" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="ConsoleApp1" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SocketServer" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -83,7 +201,8 @@
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -97,11 +216,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/ConsoleApp1/bin/Debug/netcoreapp2.2/ConsoleApp1.dll" />
+  <component name="RunManager" selected=".NET Project.SocketServer">
+    <configuration name="SocketClient" type="DotNetProject" factoryName=".NET Project" singleton="false" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SocketClient/bin/Debug/netcoreapp2.2/SocketClient.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ConsoleApp1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SocketClient" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SocketClient/SocketClient.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.2" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocketServer" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/SocketServer/bin/Debug/netcoreapp2.2/SocketServer.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SocketServer" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -116,6 +253,15 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.SocketServer" />
+      <item itemvalue=".NET Project.SocketClient" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue=".NET Project.SocketClient" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -128,12 +274,20 @@
       <option name="presentableId" value="Default" />
       <updated>1563525541090</updated>
       <workItem from="1563525546247" duration="1178000" />
-      <workItem from="1563774261188" duration="291000" />
+      <workItem from="1563774261188" duration="20073000" />
     </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1563774731458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563774731458</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1469000" />
+    <option name="totallyTimeSpent" value="21251000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -145,28 +299,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2180" y="808" width="1400" height="1000" extended-state="0" />
+    <frame x="1916" y="768" width="1928" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25369823" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18244681" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32908458" />
+      <window_info active="true" anchor="bottom" x="3840" y="793" width="1920" height="1019" id="Run" order="2" type="WINDOWED" visible="true" weight="0.17672887" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32930845" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32821077" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.32908458" />
+      <window_info anchor="bottom" id="Build" order="15" visible="true" weight="0.043907795" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -177,6 +331,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -189,20 +347,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ConsoleApp1/Program.cs">
+    <entry file="file://$PROJECT_DIR$/SocketServer/Event.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state relative-caret-position="36">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding>
-            <marker date="1563774308462" expanded="true" signature="37:131" ph="{...}" />
-            <marker date="1563774308462" expanded="true" signature="57:129" ph="{...}" />
-            <marker date="1563774308462" expanded="true" signature="99:123" ph="{...}" />
+            <marker date="1563780859821" expanded="true" signature="37:91" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocketServer/EventManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <marker date="1563781574374" expanded="true" signature="6:47" ph="..." />
+            <marker date="1563781574374" expanded="true" signature="71:602" ph="{...}" />
+            <marker date="1563781574374" expanded="true" signature="100:600" ph="{...}" />
+            <marker date="1563781574374" expanded="true" signature="238:267" ph="{...}" />
+            <marker date="1563781574374" expanded="true" signature="313:379" ph="{...}" />
+            <marker date="1563781574374" expanded="true" signature="447:484" ph="{...}" />
+            <marker date="1563781574374" expanded="true" signature="550:597" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocketServer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <marker date="1563787632811" expanded="true" signature="6:134" ph="..." />
+            <marker date="1563787632811" expanded="true" signature="158:246" ph="{...}" />
+            <marker date="1563787632811" expanded="true" signature="175:244" ph="{...}" />
+            <marker date="1563787632811" expanded="true" signature="211:241" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SocketClient/Program.cs">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding>
+            <marker date="1563794089744" expanded="true" signature="6:128" ph="..." />
+            <marker date="1563794089744" expanded="true" signature="153:994" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="170:992" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="206:989" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="325:921" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="482:665" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="502:659" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="697:881" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="717:875" ph="{...}" />
+            <marker date="1563794089744" expanded="true" signature="942:985" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocketServer/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <marker date="1563794184677" expanded="true" signature="6:134" ph="..." />
+            <marker date="1563794184677" expanded="true" signature="158:789" ph="{...}" />
+            <marker date="1563794184677" expanded="true" signature="181:787" ph="{...}" />
+            <marker date="1563794184677" expanded="true" signature="332:784" ph="{...}" />
+            <marker date="1563794184677" expanded="true" signature="577:780" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocketServer/Packet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <marker date="1563794318551" expanded="true" signature="6:102" ph="..." />
+            <marker date="1563794318551" expanded="true" signature="126:1378" ph="{...}" />
+            <marker date="1563794318551" expanded="true" signature="149:1376" ph="{...}" />
+            <marker date="1563794318551" expanded="true" signature="259:460" ph="/* public Packet(byte[] data) { ... */" />
+            <marker date="1563794318551" expanded="true" signature="487:618" ph="{...}" />
+            <marker date="1563794318551" expanded="true" signature="651:756" ph="{...}" />
+            <marker date="1563794318551" expanded="false" signature="785:812" ph="{...}" />
+            <marker date="1563794318551" expanded="false" signature="835:880" ph="{...}" />
+            <marker date="1563794318551" expanded="true" signature="881:994" ph="/* public Packet(Guid packetGuid, byte[] data) { ... */" />
+            <marker date="1563794318551" expanded="true" signature="1031:1078" ph="{...}" />
+            <marker date="1563794318551" expanded="false" signature="1129:1373" ph="{...}" />
+            <marker date="1563794318551" expanded="true" signature="1244:1349" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocketServer/Client.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <marker date="1563794339051" expanded="true" signature="6:136" ph="..." />
+            <marker date="1563794339051" expanded="true" signature="160:1569" ph="{...}" />
+            <marker date="1563794339051" expanded="true" signature="183:1567" ph="{...}" />
+            <marker date="1563794339051" expanded="true" signature="381:927" ph="{...}" />
+            <marker date="1563794339051" expanded="true" signature="444:842" ph="{...}" />
+            <marker date="1563794339051" expanded="true" signature="463:837" ph="{...}" />
+            <marker date="1563794339051" expanded="true" signature="994:1093" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
