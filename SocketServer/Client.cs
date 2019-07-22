@@ -8,105 +8,72 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
 namespace SocketClient {
-	public class Client {
-		private Guid guid = Guid.NewGuid();
-		private EndPoint clientEndPoint;
-		private Dictionary<Guid, Packet> packetQueue = new Dictionary<Guid, Packet>();
+    public class Client {
+        private Guid guid;
+        private EndPoint clientEndPoint;
+        private Dictionary<Guid, Packet> packetQueue = new Dictionary<Guid, Packet>();
+        private PacketManager packetManager;
 
-		public Client(EndPoint clientEndPoint) {
-			this.clientEndPoint = clientEndPoint;
-			new Thread(() => {
-				while (true) {
-					byte[] buffer = new byte[1024];
-					//Todo ask J if work when message is over 1024 bytes
-					int receivedSize = Server.server.ReceiveFrom(buffer, ref clientEndPoint);
-					//TODO Cut packet at receivedSize;
-					Console.WriteLine(Encoding.ASCII.GetString(buffer));
-					Packet packet = Packet.fromBytes(buffer);
-					//TODO maybe add automatic buffer size
-					packetQueue.Add(packet.PacketGuid, packet);
-					if (packet.Type.Equals(Packet.PacketType.EVENT)) {
-						if (EventManager.hasEvent(packet.Obj.GetValue("event").ToString()))
+        public Client(Guid guid, EndPoint clientEndPoint, PacketInit packetInit) {
+            this.guid = guid;
+            this.clientEndPoint = clientEndPoint;
+            
+            packetManager = new PacketManager(Server.server, (IPEndPoint) clientEndPoint);
+            packetManager.handlePacket(packetInit);
+            
+            packetManager.sendPacket(packetInit, packet => { Console.WriteLine("YAAAAAY"); }, packet => { Console.WriteLine("WTF"); }, 1000);
 
-							EventManager.execEvent(packet.Obj.GetValue("event").ToString());
-					} else {
-						
-					}
-				}
-			}).Start();
-			keepAlive();
-			init();
-		}
+            new Thread(() => {
+                while (true) {
+                    byte[] data = new byte[1024];
+                    Server.server.ReceiveFrom(data, ref clientEndPoint);
 
-		public void init() {
-			JObject obj = new JObject();
-			obj.Add("guid", guid);
+                    Packet packet = Packet.fromBytes(data);
+                    packetManager.handlePacket(packet);
+                    //Todo ask J if work when message is over 1024 bytes
+                    /*
+                     *                     Console.WriteLine("gonna receive");
 
-			sendEvent("init", obj, packet => { Console.WriteLine(packet.verbose()); });
-		}
+                    Console.WriteLine("received!");
+                    //TODO Cut packet at receivedSize;
+                    Console.WriteLine(Encoding.ASCII.GetString(buffer));
+                    Packet packet = Packet.fromBytes(buffer);
+                    //TODO maybe add automatic buffer size
+                    packetQueue.Add(packet.PacketGuid, packet);
+                    Console.WriteLine($"added \"{packet.PacketGuid}\" to queue");
+                    if (packet.Type.Equals(Packet.PacketType.EVENT)) {
+                        string eventName = packet.getObj().GetValue("event").ToString();
+                        if (EventManager.hasEvent(eventName))
+                            EventManager.execEvent(eventName, packet);
+                    } else {
+                        
+                    }
+                     */
+                }
+            }).Start();
+        }
 
-		public Guid Guid => guid;
+        public void init() {
+            EventManager.registerEvent("init", packet => {
+                Console.WriteLine(packet.verbose());
+                EventManager.unregisterEvent("init"); 
+            });
+            
+        }
 
-		public String sendEvent(String name, JObject request, PacketCallback cb) {
-			JObject obj = new JObject();
-			Packet.PacketType type = Packet.PacketType.MESSAGE_CALLBACK;
-			obj.Add("clientguid", guid);
-			obj.Add("type", type.ToString());
-			obj.Add("event", name);
-			obj.Add("message", request);
+        public Guid Guid => guid;
 
-			Packet packet = new Packet(type, obj);
+        Boolean connected = true;
 
-			Server.server.SendTo(packet.Data, clientEndPoint);
-
-			while (!packetQueue.ContainsKey(packet.PacketGuid)) ;
-
-			Packet resultPacket;
-			packetQueue.TryGetValue(packet.PacketGuid, out resultPacket);
-
-			packetQueue.Remove(packet.PacketGuid);
-			cb.Invoke(packet);
-			return resultPacket.ToString();
-		}
-
-		public void sendPacket(Packet packet) {
-			Server.server.SendTo(packet.Data, clientEndPoint);
-		}
-
-		public String sendPacket(Packet packet, PacketCallback success, Failed failed, int timeout) {
-			Server.server.SendTo(packet.Data, clientEndPoint);
-			new Thread(() => {
-				//TODO maybe add a timeout var in Packet
-				Thread.Sleep(timeout);
-				failed.Invoke();
-			}).Start();
-
-			while (!packetQueue.ContainsKey(packet.PacketGuid)) ;
-
-			Packet resultPacket;
-			packetQueue.TryGetValue(packet.PacketGuid, out resultPacket);
-
-			packetQueue.Remove(packet.PacketGuid);
-
-			success.Invoke(resultPacket);
-
-			return resultPacket.ToString();
-		}
-
-		public void keepAlive() {
-			new Thread(() => {
-				Boolean connected = true;
-				while (connected) {
-					JObject obj = new JObject();
-					obj.Add("clientguid", new Guid());
-					obj.Add("special", "ping!");
-					EventManager.registerEvent("KEEP_ALIVE");
-					sendPacket(new Packet(Packet.PacketType.KEEP_ALIVE, obj), packet => { Console.WriteLine("got bacK!"); }, args => {
-						connected = false;
-						Console.WriteLine("Connection lost to: " + (IPEndPoint) clientEndPoint);
-					}, 5000);
-				}
-			}).Start();
-		}
-	}
+        public void keepAlive() {
+            new Thread(() => {
+                while (connected) {
+                    packetManager.sendPacket(new PacketKeepAlive(guid), packet => { Console.WriteLine("got bacK!"); }, packet => {
+                        connected = false;
+                        Console.WriteLine("Connection lost to: " + clientEndPoint);
+                    }, 5000);
+                }
+            }).Start();
+        }
+    }
 }

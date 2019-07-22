@@ -1,23 +1,28 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/justin/RiderProjects/ConsoleApp1/SocketClient/SocketClient.csproj",
+    "projectUniqueName": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SocketClient\\SocketClient.csproj",
     "projectName": "SocketClient",
-    "projectPath": "/home/justin/RiderProjects/ConsoleApp1/SocketClient/SocketClient.csproj",
-    "outputPath": "/home/justin/RiderProjects/ConsoleApp1/SocketClient/obj/",
+    "projectPath": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SocketClient\\SocketClient.csproj",
+    "outputPath": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SocketClient\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SteamingToolLib\\SteamingToolLib.csproj": {
+            "projectPath": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SteamingToolLib\\SteamingToolLib.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

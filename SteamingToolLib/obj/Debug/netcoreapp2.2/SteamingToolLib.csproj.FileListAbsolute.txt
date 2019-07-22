@@ -1,0 +1,9 @@
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\bin\Debug\netcoreapp2.2\SteamingToolLib.deps.json
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\bin\Debug\netcoreapp2.2\SteamingToolLib.dll
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\bin\Debug\netcoreapp2.2\SteamingToolLib.pdb
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\obj\Debug\netcoreapp2.2\SteamingToolLib.csprojAssemblyReference.cache
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\obj\Debug\netcoreapp2.2\SteamingToolLib.csproj.CoreCompileInputs.cache
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\obj\Debug\netcoreapp2.2\SteamingToolLib.AssemblyInfoInputs.cache
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\obj\Debug\netcoreapp2.2\SteamingToolLib.AssemblyInfo.cs
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\obj\Debug\netcoreapp2.2\SteamingToolLib.dll
+C:\Users\Justin\RiderProjects\StreamingTool\SteamingToolLib\obj\Debug\netcoreapp2.2\SteamingToolLib.pdb

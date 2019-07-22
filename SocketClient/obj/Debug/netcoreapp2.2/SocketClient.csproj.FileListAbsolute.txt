@@ -1,0 +1,14 @@
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.deps.json
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.runtimeconfig.json
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.runtimeconfig.dev.json
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.dll
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SocketClient.pdb
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SteamingToolLib.dll
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\bin\Debug\netcoreapp2.2\SteamingToolLib.pdb
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.csprojAssemblyReference.cache
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.AssemblyInfoInputs.cache
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.AssemblyInfo.cs
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.csproj.CopyComplete
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.dll
+C:\Users\Justin\RiderProjects\StreamingTool\SocketClient\obj\Debug\netcoreapp2.2\SocketClient.pdb

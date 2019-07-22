@@ -1,23 +1,28 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/justin/RiderProjects/ConsoleApp1/SocketServer/SocketServer.csproj",
+    "projectUniqueName": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SocketServer\\SocketServer.csproj",
     "projectName": "SocketServer",
-    "projectPath": "/home/justin/RiderProjects/ConsoleApp1/SocketServer/SocketServer.csproj",
-    "outputPath": "/home/justin/RiderProjects/ConsoleApp1/SocketServer/obj/",
+    "projectPath": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SocketServer\\SocketServer.csproj",
+    "outputPath": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SocketServer\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.2"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SteamingToolLib\\SteamingToolLib.csproj": {
+            "projectPath": "C:\\Users\\Justin\\RiderProjects\\StreamingTool\\SteamingToolLib\\SteamingToolLib.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
