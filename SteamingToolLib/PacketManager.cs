@@ -9,12 +9,19 @@ using Newtonsoft.Json.Linq;
 namespace SocketClient {
     public class PacketManager {
         private static Dictionary<Guid, Packet> packetQueue = new Dictionary<Guid, Packet>();
-
-        private Socket server;
-        private IPEndPoint clientEndPoint;
-        private UdpClient udpClient;
-        private IPEndPoint remoteIpEndPoint;
-
+        private Socket socket;
+        private PacketInit packetInit;
+        public PacketManager(Socket socket) {
+            new Thread(() => {
+                byte[] data = new byte[1024];
+                socket.Receive(data);
+                //TODO shortness packet size with .length at fromBytes #ShittyComment
+                Packet packet = Packet.fromBytes(data);
+                handlePacket(packet);
+            }).Start();
+            this.socket = socket;
+        } 
+        /*
         public PacketManager(Socket server, IPEndPoint clientEndPoint) {
             this.server = server;
             this.clientEndPoint = clientEndPoint;
@@ -24,23 +31,17 @@ namespace SocketClient {
             this.udpClient = udpClient;
             this.remoteIpEndPoint = remoteIpEndPoint;
         }
-
+*/
         public void sendPacket(Packet packet) {
             byte[] data = packet.getData();
-            if (server != null)
-                server.SendTo(packet.getData(), clientEndPoint);
-            else
-                udpClient.Send(data, data.Length);
+            socket.Send(packet.getData());
         }
 
         public void sendPacket(Packet packet, PacketCallback success, Failed failed, int timeout) {
             Guid callbackGuid = Guid.NewGuid();
             packet.CallbackGuid = callbackGuid;
             byte[] data = packet.getData();
-            if (server != null)
-                server.SendTo(packet.getData(), clientEndPoint);
-            else
-                udpClient.Send(data, data.Length);
+                socket.Send(packet.getData());
             bool isSuccess = false;
             new Thread(() => {
                 Thread.Sleep(timeout);
@@ -67,14 +68,21 @@ namespace SocketClient {
             packetQueue.Add(packet.PacketGuid, packet);
             JObject obj = packet.getObj();
             Console.WriteLine($"added \"{packet.PacketGuid}\" to queue");
+            Console.WriteLine(obj);
 
             if (packet.Type.Equals(Packet.PacketType.EVENT)) {
                 String eventName = obj.GetValue("event").ToString();
                 if (EventManager.hasEvent(eventName))
                     EventManager.execEvent(eventName, packet);
-            } else if (packet.Type.Equals(Packet.PacketType.KEEP_ALIVE)) {
-                //sendPacket(new Packet(Packet.PacketType.KEEP_ALIVE, Guid));
+            } else if (packet.Type.Equals(Packet.PacketType.INIT)) {
+                packetInit = new PacketInit(Guid.Parse(packet.getObj("guid").ToString()));
+                //TODO send error: auth called twice
             }
+        }
+
+        public Guid waitForInit() {
+            while (packetInit == null) {};
+            return Guid.Parse(packetInit.getObj("guid").ToString());
         }
     }
 }
