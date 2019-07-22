@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp1 {
+namespace SocketClient {
 	public class EventManager {
 
 		static IDictionary<String, Event> events = new Dictionary<String, Event>();
@@ -18,9 +18,9 @@ namespace ConsoleApp1 {
 		public static void execEvent(String name, params Object[] args) {
 			getEvent(name).Invoke(args);
 		}
-
-		public static void registerEvent2(string name, Action action) {
-			//events.Add(name, new Event(action));
+		
+		public static Boolean hasEvent(String name) {
+			return events.ContainsKey(name);
 		}
 	}
 }

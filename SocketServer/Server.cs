@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace ConsoleApp1 {
+namespace SocketClient {
 	public class Server {
 		public static Socket server;
 		public static Dictionary<Guid, Client> clients = new Dictionary<Guid, Client>();
@@ -15,8 +15,8 @@ namespace ConsoleApp1 {
 			server = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 			server.Bind(ip);
 
-			IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0); 
 			while (true) {
+				IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0); 
 				byte[] data = new byte[1024];
 				EndPoint remote = (EndPoint) (sender);
 				server.ReceiveFrom(data, ref remote);

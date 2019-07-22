@@ -24,13 +24,13 @@ namespace SocketClient {
 		
 		public Packet(PacketType type, JObject obj) {
 			this.type = type;
-			obj.Add("packetguid", packetGuid.ToString());
-			if(!obj.ContainsKey("type"))
-				obj.Add("type", type.ToString());
+			if(!obj.ContainsKey("packetguid"))
+				obj.Add("packetguid", packetGuid.ToString());
 			if (obj.ContainsKey("timeout"))
 				timeout = int.Parse(obj.GetValue("timeout").ToString());
 			sender = Guid.Parse(obj.GetValue("clientguid").ToString());
-			message = (JObject) obj.GetValue("message");
+			if(obj.ContainsKey("message"))
+				message = JObject.Parse(obj.GetValue("message").ToString());
 			data = Encoding.ASCII.GetBytes(obj.ToString());
 		}
 
@@ -82,5 +82,6 @@ namespace SocketClient {
 			get => timeout;
 			set => timeout = value;
 		}
+		
 	}
 }

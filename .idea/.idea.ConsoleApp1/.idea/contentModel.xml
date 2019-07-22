@@ -6,7 +6,10 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="ConsoleApp1.sln" t="IncludeFlat" />
       <e p="SocketClient" t="IncludeRecursive">
-        <e p="Program.cs" t="Include" />
+        <e p="Event.cs" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="Packet.cs" t="Include" />
+        <e p="PacketEventManager.cs" t="Include" />
         <e p="SocketClient.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -21,8 +24,8 @@
         <e p="Client.cs" t="Include" />
         <e p="Event.cs" t="Include" />
         <e p="EventManager.cs" t="Include" />
+        <e p="Main.cs" t="Include" />
         <e p="Packet.cs" t="Include" />
-        <e p="Program.cs" t="Include" />
         <e p="Server.cs" t="Include" />
         <e p="SocketServer.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
