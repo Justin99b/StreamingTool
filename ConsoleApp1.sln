@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketClient", "SocketClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamingToolLib", "SteamingToolLib\SteamingToolLib.csproj", "{B7292A31-2412-428A-B22E-86D864D34259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormTest", "FormTest\FormTest.csproj", "{6389E96E-E0D9-48E3-B213-078303453230}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B7292A31-2412-428A-B22E-86D864D34259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7292A31-2412-428A-B22E-86D864D34259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7292A31-2412-428A-B22E-86D864D34259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6389E96E-E0D9-48E3-B213-078303453230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6389E96E-E0D9-48E3-B213-078303453230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6389E96E-E0D9-48E3-B213-078303453230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6389E96E-E0D9-48E3-B213-078303453230}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

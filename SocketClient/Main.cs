@@ -14,6 +14,8 @@ namespace SocketClient {
         private static PacketManager packetManager;
         private static Guid guid;
         static void Main(string[] args) {
+            new Login();
+
             client = new TcpClient("127.0.0.1", 1337);
             packetManager = new PacketManager(client.Client);
             guid = packetManager.waitForInit();
@@ -21,6 +23,7 @@ namespace SocketClient {
             while (client.Connected) {
                 Thread.Sleep(1000);
             }
+
         }
     }
 }

@@ -5,13 +5,31 @@
     <e p="C:\Users\Justin\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_ConsoleApp1.-1752533729.00" t="ExcludeRecursive" />
     <e p="C:\Users\Justin\RiderProjects\StreamingTool" t="IncludeFlat">
       <e p="ConsoleApp1.sln" t="IncludeFlat" />
+      <e p="FormTest" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="FormTest.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="FormTest.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="SocketClient" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Login.cs" t="Include" />
+        <e p="Login.Designer.cs" t="Include" />
+        <e p="Login.resx" t="Include" />
         <e p="Main.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="SocketClient.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
