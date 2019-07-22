@@ -7,9 +7,9 @@ namespace SocketClient {
             Type = PacketType.INIT;
         }
 
-        public PacketInit(Guid callbackGuid, Guid guid) {
+        public PacketInit(Guid guid) {
             Type = PacketType.INIT;
-            CallbackGuid = callbackGuid;
+            //CallbackGuid = callbackGuid;
             addToObj("guid", guid.ToString());
         }
     }
